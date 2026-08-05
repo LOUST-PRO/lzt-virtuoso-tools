@@ -1,0 +1,37 @@
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <https://schema.org/> .
+@prefix docs:   <urn:lzt:vocab:docs#> .
+
+docs:Technology a rdfs:Class ;
+    rdfs:label "Technology" ;
+    rdfs:comment "A technology stack entry documented in the corpus (Next.js, React, etc.)." .
+
+docs:Version a rdfs:Class ;
+    rdfs:label "Version" ;
+    rdfs:comment "A semver'd release of a Technology." .
+
+docs:DocumentationPage a rdfs:Class ;
+    rdfs:label "DocumentationPage" ;
+    rdfs:comment "A single documentation page, identified by its source URL." .
+
+docs:APISignature a rdfs:Class ;
+    rdfs:label "APISignature" ;
+    rdfs:comment "An exported function, class, or hook with parameter signatures." .
+
+docs:versionOf a rdf:Property ;
+    rdfs:label "versionOf" ;
+    rdfs:comment "Links a Version to its Technology." .
+
+docs:documents a rdf:Property ;
+    rdfs:label "documents" ;
+    rdfs:comment "Links a DocumentationPage to its Technology." .
+
+docs:hasAPISignature a rdf:Property ;
+    rdfs:label "hasAPISignature" ;
+    rdfs:comment "Links a DocumentationPage to its exported APISignature records." .
+
+docs:pageOf a rdf:Property ;
+    rdfs:label "pageOf" ;
+    rdfs:comment "Inverse of documents — links a page back to its Technology." .

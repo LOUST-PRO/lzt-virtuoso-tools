@@ -1,0 +1,14 @@
+# Build artifacts
+src/lzt-virtuoso-convert-jsonl-go
+bin/lzt-virtuoso-convert-jsonl-go
+*.test
+
+# Local env (contains credentials)
+env.local
+.env
+*.swp
+.DS_Store
+
+# Editor
+.vscode/
+.idea/

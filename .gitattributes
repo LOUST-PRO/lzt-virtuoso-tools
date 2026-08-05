@@ -1,0 +1,12 @@
+# Ensure LF line endings (bash scripts break with CRLF on Linux)
+* text=auto eol=lf
+
+# Source code
+*.go text eol=lf
+*.awk text eol=lf
+*.sh text eol=lf
+*.ttl text eol=lf
+
+# Explicitly binary
+*.png binary
+*.jpg binary
